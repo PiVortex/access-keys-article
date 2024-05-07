@@ -6,9 +6,12 @@ This code was written using node.js `v21.6.1`, node and npm can be installed [he
 
 1. Install dependencies
 
+    ```bash
     npm install
+    ```
 
 2. Run files separately
 
+    ```bash
     node <filename>
-
+    ```
