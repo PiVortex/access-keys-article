@@ -38,4 +38,4 @@ async function create_testnet_account(creatorAccountId, newAccountId) {
     });
 };
 
-create_testnet_account("pivortex.testnet", "mynewaccoundsft.testnet");
+create_testnet_account("pivortex.testnet", "mynewaccount.testnet");
