@@ -16,7 +16,7 @@ const connectionConfig = {
   explorerUrl: "https://testnet.nearblocks.io",
 };
 
-async function create_full_access_key(accountId) {
+async function create_function_access_key(accountId) {
     const nearConnection = await connect(connectionConfig); // Connect to NEAR
 
     // Connect to account that will sign the create account transaction
@@ -26,11 +26,15 @@ async function create_full_access_key(accountId) {
     const publicKey = newKeyPair.publicKey.toString();
     const privateKey = newKeyPair.toString();
 
-    await account.addKey(publicKey); // Add key to account
+    await account.addKey(
+        publicKey,
+        "contract.testnet", // Contract with key can call
+        ["post_image", "post_comment"], // Methods on the contract that this key can call
+    );
 
     // Print new key pair to console
     console.log("Public key", publicKey);
     console.log("Private key", privateKey);
 };
 
-create_full_access_key("pivortex.testnet");
+create_function_access_key("pivortex.testnet");
