@@ -1,5 +1,4 @@
 const { connect, KeyPair, keyStores } = require('near-api-js');
-const { key_pair } = require('near-api-js/lib/utils');
 
 const homedir = require("os").homedir();
 const CREDENTIALS_DIR = ".near-credentials";
@@ -19,7 +18,7 @@ const connectionConfig = {
 async function rotate_key(accountId, oldPublicKey) {
     const nearConnection = await connect(connectionConfig); // Connect to NEAR
 
-    // Connect to account that will sign the create account transaction
+    // Connect to account
     const account = await nearConnection.account(accountId);
 
     const newKeyPair = KeyPair.fromRandom('ed25519'); // Create key pair
