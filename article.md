@@ -28,7 +28,7 @@ We can do this all with [near-api-js](https://docs.near.org/tools/near-api-js/qu
 
 ## Account creation 
 
-First, let’s create a NEAR account and a key using a different method. For this, you will initially need a NEAR account and have the keys stored on your device. Do this using [near-cli-rs](https://docs.near.org/tools/near-cli-rs), type near, then go to account > create_account > sponsor-by-faucet-service > input account id in format <name>.testnet > cehck this doesn’t exist > autogenerate-new-keypair > save-to-legacy-keychain > testnet > create.
+First, let’s create a NEAR account and a key using a different method. For this, you will initially need a NEAR account and have the keys stored on your device. Do this using [near-cli-rs](https://docs.near.org/tools/near-cli-rs), type near, then go to account > create_account > sponsor-by-faucet-service > input account id in format <name>.testnet > check this doesn’t exist > autogenerate-new-keypair > save-to-legacy-keychain > testnet > create.
 
 ```javascript
 async function create_testnet_account(creatorAccountId, newAccountId) {
