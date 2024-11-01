@@ -10,7 +10,7 @@ Blockchain leverages asymmetric cryptography to produce digital signatures. When
 
 ## Deriving a keypair from a seed phrase 
 
-Since private keys have poor readability, we can instead generate a seed phrase, a random list of 12 or 24 words representing a private key. We then use the seed phrase to derive a private and public key. It is worth noting that multiple public keys can be derived from a private key. The code below shows how one can easily create a NEAR seed phrase and key pair in node.js. 
+Since private keys have poor readability, we can instead generate a seed phrase, a random list of 12 or 24 words representing a private key. We then use the seed phrase to derive a private and public key. It is worth noting that multiple public keys can be derived from a private key. The code below shows how one can easily create a NEAR seed phrase in node.js. 
 
 ```javascript
 const { generateSeedPhrase } = require('near-seed-phrase');
